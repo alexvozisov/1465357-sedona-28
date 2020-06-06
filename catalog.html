@@ -23,6 +23,63 @@
 
   <main>
     <section>
+      <!--Скрытый заголовок-->
+      <h2>Фильтр гостиниц</h2>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="Swimming-pool" checked>
+                Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="Parking">
+                Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="Wi-Fi">
+                Wi-Fi
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="Hotels" checked>
+                Гостиница
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="Motels" checked>
+                Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="Apartments" checked>
+                Апартаменты
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <label>Стоимость в сутки (Р):
+          <input type="text" name="from" placeholder="От 0">
+          <input type="text" name="to" placeholder="До 3000">
+        </label>
+        <button type="submit">Показать</button>
+      </form>
+    </section>
+    <section>
       <ul>
         <li>
           <img src="img/Amara Resort & Spa.jpg" alt="Фото гостиницы Amara Resort & Spa">

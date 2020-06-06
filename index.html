@@ -103,13 +103,30 @@
       </p>
     </section>
     <section>
-      <!--Форма поиска будет дополнена-->
       <h2>Поиск гостиницы в Седоне</h2>
-      <p>Дата заезда</p>
-      <p>Дата выезда</p>
-      <p>Взрослые</p>
-      <p>Дети</p>
-      <a class="button">Найти</a>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <label>
+          Дата заезда:
+          <input type="text" name="date in" placeholder="24 апреля 2017">
+        </label><br>
+        <label>
+          Дата выезда:
+          <input type="text" name="date out" placeholder="4 июля 2017">
+        </label><br>
+        <label for="amount-adults">
+          Взрослые:
+          <input type="button">
+          <input type="text" name="adults-amount" id="amount-adults" placeholder="2">
+          <input type="button">
+        </label>
+        <label for="amount-children">
+          Дети:
+          <input type="button">
+          <input type="text" name="children-amount" id="amount-children" placeholder="0">
+          <input type="button">
+        </label>
+        <button type="submit">Найти</button>
+      </form>
       <img src="img/map.png" width="1199" height="594" alt="Карта">
     </section>
 

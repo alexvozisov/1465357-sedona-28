@@ -23,8 +23,7 @@
 
   <main>
     <section>
-      <!--Скрытый заголовок-->
-      <h2>Фильтр гостиниц</h2>
+      <h2 class="visually-hidden">Фильтр гостиниц</h2>
       <form action="https://echo.htmlacademy.ru" method="get">
         <fieldset>
           <legend>Инфраструктура:</legend>
@@ -72,10 +71,15 @@
             </li>
           </ul>
         </fieldset>
-        <label>Стоимость в сутки (Р):
-          <input type="text" name="from" placeholder="От 0">
-          <input type="text" name="to" placeholder="До 3000">
-        </label>
+        <fieldset>
+          <legend>Стоимость в сутки (Р):</legend>
+          <label for="from">
+            <input type="text" name="from" id="from" placeholder="От 0">
+          </label>
+          <label for="to">
+            <input type="text" name="to" id="to" placeholder="До 3000">
+          </label>
+        </fieldset>
         <button type="submit">Показать</button>
       </form>
     </section>
@@ -117,8 +121,7 @@
       </p>
     </section>
     <section>
-      <!--Скрытый заголовок-->
-      <h2>Социальные сети</h2>
+      <h2 class="visually-hidden">Социальные сети</h2>
       <ul>
         <li>
           <a href="img/svg-sedona/twitter.svg" width="46" height="48">Твиттер</a>

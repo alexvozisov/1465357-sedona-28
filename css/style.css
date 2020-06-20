@@ -22,7 +22,6 @@ body {
   line-height: 21px;
   text-transform: uppercase;
   color: var(--basic-grey);
-  background-color: var(--basic-blck);
 }
 
 a {
@@ -32,9 +31,6 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-li {
-  list-style: none;
 }
 .visually-hidden {
   position: absolute;
@@ -48,6 +44,9 @@ li {
 }
 .main-navigation {
  background-color: transparent;
+}
+.site-navigation li {
+  list-style: none;
 }
 .site-navigation a{
   font-size: 14px;
@@ -69,8 +68,7 @@ color: var(--basic-blue);
   color: var(--basic-brown);
 }
 
-
-.about-sedona .container {
+.about-sedona .contour {
   background-color: var(--basic-white);
 }
 
@@ -87,17 +85,14 @@ color: var(--basic-blue);
   line-height: 26px;
   text-align: center;
 }
-.sedona-features li {
-  list-style: none;
-  text-align: center;
-  background-color: #eeeeee;
-}
 .sedona-features1 {
+  list-style: none;
   text-align: center;
   color: var(--basic-white);
   background-color: var(--basic-blue);
 }
 .sedona-features2 {
+  list-style: none;
   text-align: center;
   background-color: var(--basic-light-gray);
   color: var(--basic-black);
@@ -110,6 +105,9 @@ color: var(--basic-blue);
 
 .tourist-essentials {
  background-color: transparent;
+}
+.tourist-essentials li {
+  list-style: none;
 }
 .tourist-essentials h3 {
  font-size: 21px;
@@ -205,7 +203,8 @@ box-sizing: border-box;
   text-align: center;
   color: var(--basic-black);
 }
-.footer-social {
+.footer-social li {
+  list-style: none;
   text-align: center;
 }
 
@@ -232,28 +231,36 @@ box-sizing: border-box;
   background-color: var(--basic-black);
   background-image: url(../img/background.jpg);
 }
-legend {
+.form2 li{
   list-style: none;
+}
+.form2 fieldset {
+  border: none;
   font-size: 16px;
   font-weight: 700;
   color: var(--basic-white);
 }
-label {
+.form2 label {
   font-size: 14px;
   font-weight: 400;
   color: var(--basic-white);
 }
-.price input[type="text"] {
-  background-image: transparent;
+.price input {
+  background-color: transparent;
   color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+}
+.price input::placeholder {
+  color: var(--basic-white);
+  text-transform: uppercase;
 }
 .form2 button {
  font: inherit;
  background-color: transparent;
  color: var(--basic-white);
  text-transform: uppercase;
- stroke: 2px solid var(--basic-white);
-}
+ border: 2px solid var(--basic-white);
+} 
 .form2 button:hover {
   background-color: var(--basic-white);
   color: var(--basic-black);
@@ -277,6 +284,7 @@ label {
   color: rgba(0, 0, 0, 0.3);
   text-decoration: underline dotted var(--basic-blue);
   text-underline-position: under;
+  list-style: none;
 }
 .sort-by li:hover,
 .sort-by li:focus {
@@ -290,11 +298,21 @@ label {
   color: var(--basic-blue);
   text-decoration: none;
 }
+.catalog li {
+  list-style: none;
+}
 .catalog h2 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+}
+.catalog h2:hover,
+.catalog h2:focus {
+  color: var(--basic-blue);
+}
+.catalog h2:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 .catalog .info {
   font-weight: 700;

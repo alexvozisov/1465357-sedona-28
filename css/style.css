@@ -1,0 +1,328 @@
+:root {
+  --basic-white: #ffffff;
+  --basic-light-gray: #eeeeee;
+  --basic-grey: #333333;
+  --basic-black: #000000;
+
+  --basic-blue: #81b3d2;
+  --basic-focus-blue: #669ec0;
+  --basic-press-blue: #5496bd;
+
+  --basic-brown: #766357;
+  --basic-focus-brown: #604e43;
+  --basic-press-brown: #503e33;
+}
+
+body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-grey);
+  background-color: var(--basic-blck);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+li {
+  list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0,0,0,0);
+  overflow: hidden;
+}
+.main-navigation {
+ background-color: transparent;
+}
+.site-navigation a{
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus{
+color: var(--basic-blue);
+}
+
+.site-navigation a:active{ 
+  color: var(--basic-black); 
+  opacity: 30%;
+}
+.site-navigation .active {
+  color: var(--basic-brown);
+}
+
+
+.about-sedona .container {
+  background-color: var(--basic-white);
+}
+
+.about-sedona h2 {
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.about-sedona p {
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+.sedona-features li {
+  list-style: none;
+  text-align: center;
+  background-color: #eeeeee;
+}
+.sedona-features1 {
+  text-align: center;
+  color: var(--basic-white);
+  background-color: var(--basic-blue);
+}
+.sedona-features2 {
+  text-align: center;
+  background-color: var(--basic-light-gray);
+  color: var(--basic-black);
+}
+.sedona-features1 h3,
+.sedona-features2 h3 {
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.tourist-essentials {
+ background-color: transparent;
+}
+.tourist-essentials h3 {
+ font-size: 21px;
+ text-align: center;
+ color: var(--basic-black);
+}
+.tourist-essentials p {
+  text-align: center;
+}
+.interest h2 {
+  font-size: 30px;
+  line-height: 24px;
+  text-align: center;
+  background-color: transparent;
+  color: var(--basic-black);
+}
+.interest p {
+  text-align: center;
+  line-height: 24px;
+}
+.form h2 {
+  font-size: 21px;
+  line-height: 26px;
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+  text-align: center;
+}
+.form a {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+.form a:link {
+  background-color: var(--basic-brown);
+}
+.form a:visited {
+  color: var(--basic-white);
+}
+.form a:hover,
+.form a:focus {
+  background-color: var(--basic-focus-brown);
+  border: 1px solid var(--basic-black);
+}
+.form a:active {
+  background-color: var(--basic-press-brown);
+  color: rgba(255, 255, 255, 0.3)
+}
+.form label {
+  font-weight: 700;
+  line-height: 26px;
+  color: var(--basic-black);
+}
+.form input[type="text"] {
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 18px;
+  background-color: #f2f2f2;
+  color: var(--basic-black);
+  border:none 
+}
+.form input[type="text"]:hover {
+ background-color: #ebebeb;
+}
+.form input[type="text"]:focus {
+background-color: var(--basic-white);
+border: 2px solid #E5E5E5;
+box-sizing: border-box;
+}
+
+.form button {
+ font-size: 21px;
+ font-weight: 700;
+ line-height: 27px;
+ color: var(--basic-white);
+ background-color: var(--basic-blue);
+ border: none;
+ text-transform: uppercase;
+}
+.form button:hover,
+.form button:focus {
+  background-color: var(--basic-focus-blue);
+}
+.form button:active {
+  background-color: var(--basic-press-blue);
+  color: rgba(255, 255, 255, 0.3);
+}
+.tel a,
+.tel p{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--basic-black);
+}
+.footer-social {
+  text-align: center;
+}
+
+/*social buttons*/
+.social-button:link {
+  color: var(--basic-black);
+}
+.social-button:visited{
+ color: var(--basic-black);
+}
+.social-button:hover,
+.social-button:focus {
+  background-color: var(--basic-focus-blue);
+}
+.social-button:active {
+  background-color: var(--basic-press-blue);
+  color: rgba(255, 255, 255, 0.3);
+}
+.developer {
+  line-height: 26px;
+  text-align: center;
+}
+.background {
+  background-color: var(--basic-black);
+  background-image: url(../img/background.jpg);
+}
+legend {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--basic-white);
+}
+label {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--basic-white);
+}
+.price input[type="text"] {
+  background-image: transparent;
+  color: var(--basic-white);
+}
+.form2 button {
+ font: inherit;
+ background-color: transparent;
+ color: var(--basic-white);
+ text-transform: uppercase;
+ stroke: 2px solid var(--basic-white);
+}
+.form2 button:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+.filter-results h2 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+.filter-results h3{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+.sort-by li{
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline dotted var(--basic-blue);
+  text-underline-position: under;
+}
+.sort-by li:hover,
+.sort-by li:focus {
+  color: var(--basic-blue);
+}
+.sort-by li:active {
+  color: var(--basic-black);
+  text-decoration: none;
+}
+.sort-by li:first-child {
+  color: var(--basic-blue);
+  text-decoration: none;
+}
+.catalog h2 {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+}
+.catalog .info {
+  font-weight: 700;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+}
+.catalog .info:focus,
+.catalog .info:hover {
+  background-color: var(--basic-focus-blue);
+}
+.catalog .info:active {
+ background-color: var(--basic-press-blue);
+ color: rgba(255, 255, 255, 0.3);
+}
+.catalog .booking {
+  font-weight: 700;
+  background-color: var(--basic-brown);
+  color: var(--basic-white);
+  text-transform: uppercase;
+  border: none;
+}
+.catalog .booking:focus,
+.catalog .booking:hover {
+  background-color: var(--basic-focus-brown);
+}
+.catalog .booking:active {
+ background-color: var(--basic-press-brown);
+ color: rgba(255, 255, 255, 0.3);
+}

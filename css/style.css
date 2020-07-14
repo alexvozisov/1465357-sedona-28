@@ -71,7 +71,7 @@ img {
   z-index: 2;
 }
 .main-images {
- background-image: url(/img/background\photo.jpg);
+ background-image: url(/img/backgroundphoto.jpg);
  display: flex;
  justify-content: center;
  align-items: center;

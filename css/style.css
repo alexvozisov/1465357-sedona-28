@@ -32,7 +32,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -49,20 +50,32 @@ img {
   background-color: transparent;
 }
 .site-navigation {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1056px;
+  width: 1200px;
   height: 56px;
   list-style: none;
-  padding: 0px 72px;
+  padding: 0px 36px;
   margin: 0px;
+  box-sizing: border-box;
 }
 .site-navigation a{
+  display: block;
+  padding: 15px 35px;
   font-size: 14px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+}
+.site-navigation li:nth-child(2){
+  position: absolute;
+  left: 300px;
+}
+.site-navigation li:nth-child(3){
+  position: absolute;
+  left: 750px;
 }
 .logo-svg {
   position: absolute;
@@ -91,14 +104,24 @@ color: var(--basic-blue);
 .site-navigation .active {
   color: var(--basic-brown);
 }
-
+.about-sedona .contour::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 58px;
+  top: 509px;
+  background-image: url(../img/svg-sedona/intro-mask.svg);
+  z-index: 100;
+}
 .about-sedona .contour {
   background-color: var(--basic-white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 272px;
+  justify-content: space-around;
+  min-height: 214px;
+  padding: 40px 0px;
+  box-sizing: border-box;
 }
 .about-sedona h2 {
   font-size: 21px;
@@ -126,7 +149,7 @@ color: var(--basic-blue);
 .first-feature {
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
- grid-template-rows: 256px;
+ min-height: 256px;
 }
 .first-text {
   grid-row: 1/2;
@@ -144,7 +167,7 @@ color: var(--basic-blue);
 .second-feature {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 256px;
+  min-height: 256px;
 }
 .second-text {
   grid-row: 1/2;
@@ -162,7 +185,7 @@ color: var(--basic-blue);
 .sedona-features2 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 256px;
+  min-height: 256px;
   list-style: none;
   text-align: center;
   background-color: var(--basic-light-gray);
@@ -177,7 +200,6 @@ color: var(--basic-blue);
   margin: 0;
 }
 .other-features {
-  position: relative;
   padding-top: 47px;
 }
 .other-features span {
@@ -189,13 +211,15 @@ color: var(--basic-blue);
  background-color: var(--basic-white);
  display: grid;
  grid-template-columns: 1fr 1fr 1fr;
- grid-template-rows: 330px;
+ min-height: 330px;
  align-items: center;
+ padding: 0px;
 }
 .tourist-essentials li {
   list-style: none;
 }
 .tourist-essentials h3 {
+ margin-top: 27px;
  font-size: 21px;
  text-align: center;
  color: var(--basic-black);
@@ -206,9 +230,10 @@ color: var(--basic-blue);
   margin: 25px;
 }
 .interest {
-  height: 233px;
+  min-height: 205px;
   padding-top: 58px;
-  margin: auto;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 .interest h2 {
   font-size: 30px;
@@ -223,6 +248,9 @@ color: var(--basic-blue);
   line-height: 24px;
   margin-top: 14px;
   margin-bottom: 0px;
+}
+.form {
+  position: relative;
 }
 .form-block {
   width: 568px;
@@ -250,9 +278,12 @@ color: var(--basic-blue);
 }
 .form-block a:active {
   background-color: var(--basic-press-brown);
-  color: rgba(255, 255, 255, 0.3)
+  color: rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 .form-block form {
+ position: absolute;
+ background-color: var(--basic-white);
  box-shadow: 0px 7px 15px rgba(0, 1, 1, 0.15);
  width: 458px;
  height: 285px;
@@ -270,17 +301,58 @@ color: var(--basic-blue);
   font-weight: 700;
   line-height: 18px;
   background-color: #f2f2f2;
+  background-image: url(../img/svg-sedona/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: 316px;
   color: var(--basic-black);
-  border:none 
+  border: none;
+  padding: 10px 13px;
+  margin-left: 15px;
+  width: 320px;
+}
+
+label:first-child input[type="text"] {
+  margin-left: 18px;
 }
 .form-block input[type="text"]:hover {
  background-color: #ebebeb;
 }
 .form-block input[type="text"]:focus {
 background-color: var(--basic-white);
-box-sizing: border-box;
+width: 318px;
+border: 2px solid #e5e5e5;
+outline: none;
+;
 }
-
+.amount {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.amount label {
+  margin-bottom: 0px;
+}
+.amount label:nth-child(2) {
+  position: absolute;
+  left: 60%;
+}
+.amount input[type="text"] {
+  width: 88px;
+  text-align: center;
+  margin-left: 25px;
+}
+.amount input[type="text"]:focus {
+  background-color: var(--basic-white);
+  width: 88px;
+  box-sizing: border-box;
+}
+.amount label::before {
+  content: "";
+  color: black;
+}
+.amount label:first-child input {
+  margin-left: 35px;
+}
 .form-block button {
  display: block;
  font-size: 21px;
@@ -292,6 +364,7 @@ box-sizing: border-box;
  text-transform: uppercase;
  padding: 16px 196px;
  margin-top: 55px;
+ outline: none;
 }
 .form-block button:hover,
 .form-block button:focus {
@@ -302,15 +375,30 @@ box-sizing: border-box;
   color: rgba(255, 255, 255, 0.3);
 }
 .map {
+  display: block;
   width: 100%;
 }
 .main-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   display: grid;
   padding: 0px 73px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 120px;
   height: 120px;
   background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+}
+.main-footer-catalog {
+  width: 100%;
+  display: grid;
+  padding: 0px 73px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 120px;
+  height: 120px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
 }
 .tel {
   justify-items: center;
@@ -335,6 +423,7 @@ box-sizing: border-box;
 }
 .social-list {
   display: flex;
+  height: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -344,11 +433,18 @@ box-sizing: border-box;
 .footer-social li {
   list-style: none;
   text-align: center;
+  margin-right: 6px;
 }
 
 /*social buttons*/
 .social-button:link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 48px;
   color: var(--basic-black);
+  background-color: var(--basic-blue);
 }
 .social-button:visited{
  color: var(--basic-black);
@@ -375,6 +471,10 @@ box-sizing: border-box;
   display: block;
   margin-right: 8px;
 }
+.developer svg {
+  width: min-content;
+  height: min-content;
+}
 .background {
   height: 217px;
   background-color: var(--basic-black);
@@ -384,15 +484,15 @@ box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding: 26px 72px;
+  box-sizing: border-box;
 }
 .infrahouse {
   display: flex;
-  margin-left: 72px;
 }
 .pricebutton {
   display: flex;
   flex-direction: column;
-  margin-right: 73px;
 }
 .pricebutton legend {
   margin-bottom: 11px;
@@ -411,7 +511,6 @@ fieldset legend {
   margin-bottom: 25px;
 }
 .form2 fieldset {
-  margin-top: 26px;
   padding: 0px;
   border: none;
   font-size: 16px;
@@ -423,15 +522,49 @@ fieldset legend {
   font-weight: 400;
   color: var(--basic-white);
 }
-.price input {
+.price-option {
+  border: 2px solid var(--basic-white);
+  min-width: 317px ;
+  position: relative;
+}
+.price input[type="text"] {
   background-color: transparent;
   color: var(--basic-white);
-  border: 2px solid var(--basic-white);
-  height: 30px;
+  border: none;
+  min-height: 30px;
+  text-align: center;
+  margin: 0px;
+}
+.price-option label:first-child input{
+ margin: 0px;
+}
+.price-option label:first-child::after {
+ content: "";
+ position: absolute;
+ top: 5px;
+ width: 2px;
+ height: 22px;
+ background-color: var(--basic-white); 
 }
 .price input::placeholder {
   color: var(--basic-white);
   text-transform: uppercase;
+}
+.filter-option label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  user-select: none;
+  margin-left: 33px;
+}
+.filter-option label::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/svg-sedona/checkbox-off.svg);
+  left: -30px;
+  top: 0px;
+  width: 23px;
+  height: 23px;
 }
 .form2 button {
  width: 137px;
@@ -452,25 +585,27 @@ fieldset legend {
   display: flex;
   align-items: center;
   justify-content: left;
-  padding-left: 73px;
+  padding: 30px 73px;
+  border-bottom: 1px solid #e5e5e5;
 }
 .filter-results h2 {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
+  margin: 0px;
   margin-right: 46px;
-  margin-top: 29px;
-  margin-bottom: 31px;
 }
 .filter-results h3{
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: var(--basic-black);
+  margin: 0px;
 }
 .sort-by {
   display: flex;
+  margin: 0px;
 }
 .sort-by li{
   font-size: 12px;
@@ -494,6 +629,22 @@ fieldset legend {
   color: var(--basic-blue);
   text-decoration: none;
 }
+.sort-arrows {
+  margin-left: auto;
+}
+.sort-arrows .updir {
+  margin-right: 6px;
+}
+.sort-arrows .downdir {
+  margin-left: 6px;
+}
+.sort-arrows button {
+  padding: 0;
+  border: none;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
 .catalog {
   padding: 0px;
   margin: 0px;
@@ -501,9 +652,8 @@ fieldset legend {
 .catalog li {
   display: flex;
   list-style: none;
-  padding-left: 72px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 24px 73px;
+  border-bottom: 1px solid #e5e5e5;
 }
 .catalog img {
   width: 135px;
@@ -529,10 +679,13 @@ li .note {
   color: rgba(0, 0, 0, 0.3);
 }
 .note p {
-  display: inline-block;
+  position: relative;
   margin-top: 10px;
   margin-bottom: 17px;
-  outlne: 1px solid black;
+}
+.note span {
+  position: absolute;
+  left: 45%;
 }
 .catalog .info {
   display: inline-block;
@@ -568,7 +721,22 @@ li .note {
  background-color: var(--basic-press-brown);
  color: rgba(255, 255, 255, 0.3);
 }
-
+.rating {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.rating img {
+  width: 19px;
+  height: 17px;
+}
+.rating-numeral {
+  display: block;
+  background-color: #f2f2f2;
+  padding: 3px 12px 3px 15px;
+}
 .page {
   height: 100%;
 }
@@ -579,6 +747,7 @@ li .note {
   align-content: start;
 }
 .wrapper {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   background-color: var(--basic-white);

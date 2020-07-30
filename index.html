@@ -53,6 +53,7 @@
             </div>
             <ul class="tourist-essentials">
               <li>
+                <img src="img/svg-sedona/icon-1.svg" width="75" height="72" alt="Иконка домика">
                 <h3>Жильё</h3>
                 <p>
                   Рекомендуем пожить в настоящем<br>
@@ -60,6 +61,7 @@
                 </p>
               </li>
               <li>
+                <img src="img/svg-sedona/icon-3.svg" width="75" height="70" alt="Иконка еды">
                 <h3>Еда</h3>
                 <p>
                   Всегда заказывайте фирменный бургер,<br>
@@ -67,6 +69,7 @@
                 </p>
               </li>
               <li>
+                <img src="img/svg-sedona/icon-2.svg" width="64" height="77" alt="Иконка сувениров">
                 <h3>Сувениры</h3>
                 <p>
                   Не только китайского, но и местного<br>
@@ -137,18 +140,16 @@
               Дата выезда:
               <input type="text" name="date out" placeholder="4 июля 2017">
             </label>
-            <label for="amount-adults">
-              Взрослые:
-              <input type="button">
-              <input type="text" name="adults-amount" id="amount-adults" placeholder="2">
-              <input type="button">
-            </label>
-            <label for="amount-children">
-              Дети:
-              <input type="button">
-              <input type="text" name="children-amount" id="amount-children" placeholder="0">
-              <input type="button">
-            </label>
+            <div class="amount">
+              <label for="amount-adults">
+                Взрослые:
+                <input type="text" name="adults-amount" id="amount-adults" placeholder="2">
+              </label>
+              <label for="amount-children">
+                Дети:
+                <input type="text" name="children-amount" id="amount-children" placeholder="0">
+              </label>
+            </div>
             <button type="submit">Найти</button>
           </form>
         </div>
@@ -170,19 +171,19 @@
           <li>
             <a class="social-button" href="#">
               <span class="visually-hidden">Твиттер</span>
-              <img src="img/svg-sedona/twitter.svg" width="46" height="48" alt="Иконка Твиттера">
+              <img src="img/svg-sedona/twitter.svg" width="17" height="17" alt="Иконка Твиттера">
             </a>
           </li>
           <li>
             <a class="social-button" href="#">
               <span class="visually-hidden">Фейсбук</span>
-              <img src="img/svg-sedona/fb-icon.svg" width="46" height="48" alt="Иконка Фейсбука">
+              <img src="img/svg-sedona/fb-icon.svg" width="12" height="20" alt="Иконка Фейсбука">
             </a>
           </li>
           <li>
             <a class="social-button" href="#">
               <span class="visually-hidden">Ютуб</span>
-              <img src="img/svg-sedona/youtube.svg" width="46" height="48" alt="Иконка Ютуба">
+              <img src="img/svg-sedona/youtube.svg" width="20" height="16" alt="Иконка Ютуба">
             </a>
           </li>
         </ul>
@@ -190,7 +191,7 @@
       <p class="developer">
         <span>Website by</span>
         <a href="https://htmlacademy.ru/">
-          <img src="img/svg-sedona/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy">
+          <svg src="img/svg-sedona/logo-htmlacademy.svg" width="115" height="41" alt="Логотип HTML Academy"></svg>
         </a>
       </p>
     </footer>

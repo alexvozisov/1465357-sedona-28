@@ -34,21 +34,21 @@
               <fieldset>
                 <legend>Инфраструктура:</legend>
                 <ul>
-                  <li>
+                  <li class="filter-option">
                     <label>
-                      <input type="checkbox" name="Swimming-pool" checked>
+                      <input type="checkbox" class="visually-hidden filter-input-checkbox" name="Swimming-pool" checked>
                       Бассейн
                     </label>
                   </li>
-                  <li>
+                  <li class="filter-option">
                     <label>
-                      <input type="checkbox" name="Parking">
+                      <input type="checkbox" class="visually-hidden filter-input-checkbox" name="Parking">
                       Парковка
                     </label>
                   </li>
-                  <li>
+                  <li class="filter-option">
                     <label>
-                      <input type="checkbox" name="Wi-Fi">
+                      <input type="checkbox" class="visually-hidden filter-input-checkbox" name="Wi-Fi">
                       Wi-Fi
                     </label>
                   </li>
@@ -57,21 +57,21 @@
               <fieldset>
                 <legend>Тип жилья:</legend>
                 <ul>
-                  <li>
+                  <li class="filter-option">
                     <label>
-                      <input type="checkbox" name="Hotels" checked>
+                      <input type="checkbox" class="visually-hidden filter-input-checkbox" name="Hotels" checked>
                       Гостиница
                     </label>
                   </li>
-                  <li>
+                  <li class="filter-option">
                     <label>
-                      <input type="checkbox" name="Motels" checked>
+                      <input type="checkbox" class="visually-hidden filter-input-checkbox" name="Motels" checked>
                       Мотель
                     </label>
                   </li>
-                  <li>
+                  <li class="filter-option">
                     <label>
-                      <input type="checkbox" name="Apartments" checked>
+                      <input type="checkbox" class="visually-hidden filter-input-checkbox" name="Apartments" checked>
                       Апартаменты
                     </label>
                   </li>
@@ -81,12 +81,14 @@
             <div class="pricebutton">
               <fieldset>
                 <legend>Стоимость в сутки (Р):</legend>
-                <label for="from" class="price">
-                  <input type="text" name="from" id="from" placeholder="От 0">
-                </label>
-                <label for="to" class="price">
-                  <input type="text" name="to" id="to" placeholder="До 3000">
-                </label>
+                <div class="price-option">
+                  <label for="from" class="price">
+                    <input type="text" name="from" id="from" placeholder="От 0">
+                  </label>
+                  <label for="to" class="price">
+                    <input type="text" name="to" id="to" placeholder="До 3000">
+                  </label>
+                </div>
               </fieldset>
               <button type="submit">Показать</button>
             </div>
@@ -107,6 +109,12 @@
             По рейтингу
           </li>
         </ul>
+        <span class="sort-arrows">
+          <button><img src="img/svg-sedona/icon-up-dir.svg" class="updir purchase-button" width="11" height="10"
+              alt="Сортировка по возрастанию"></button>
+          <button><img src="img/svg-sedona/icon-down-dir.svg" class="downdir purchase-button" width="11" height="10"
+              alt="Сортировка по убыванию"></button>
+        </span>
       </section>
       <section>
         <ul class="catalog">
@@ -115,11 +123,17 @@
             <div class="note">
               <h2>Amara Resort & Spa</h2>
               <p>Гостиница
-                От 4000 р.</p>
+                <span>От 4000 р.</span></p>
               <div class="buttons">
                 <button type="button" class="info">Подробнее</button>
                 <button type="button" class="booking">Забронировать</button>
               </div>
+            </div>
+            <div class="rating">
+              <span>
+                <img src="img/svg-sedona/star.svg" width="19" height="17" alt="Звезды для рейтинга">
+              </span>
+              <span class="rating-numeral">Рейтинг 8,5</span>
             </div>
           </li>
           <li>
@@ -127,11 +141,17 @@
             <div class="note">
               <h2>Desert Quail Inn</h2>
               <p>Мотель
-                От 3000 р.</p>
+                <span>От 3000 р.</span></p>
               <div class="buttons">
                 <button type="button" class="info">Подробнее</button>
                 <button type="button" class="booking">Забронировать</button>
               </div>
+            </div>
+            <div class="rating">
+              <span>
+                <img src="img/svg-sedona/star.svg" width="19" height="17" alt="Звезды для рейтинга">
+              </span>
+              <span class="rating-numeral">Рейтинг 8,9</span>
             </div>
           </li>
           <li>
@@ -139,18 +159,24 @@
             <div class="note">
               <h2>Villas At Poco Diablo</h2>
               <p>Апартаменты
-                От 2000 р.</p>
+                <span>От 2000 р.</span></p>
               <div class="buttons">
                 <button type="button" class="info">Подробнее</button>
                 <button type="button" class="booking">Забронировать</button>
               </div>
+            </div>
+            <div class="rating">
+              <span>
+                <img src="img/svg-sedona/star.svg" width="19" height="17" alt="Звезды для рейтинга">
+              </span>
+              <span class="rating-numeral">Рейтинг 9,2</span>
             </div>
           </li>
         </ul>
       </section>
     </main>
 
-    <footer class="main-footer">
+    <footer class="main-footer-catalog">
       <section class="tel">
         <p>
           #visitsedona
@@ -163,19 +189,19 @@
           <li>
             <a class="social-button" href="#">
               <span class="visually-hidden">Твиттер</span>
-              <img src="img/svg-sedona/twitter.svg" width="46" height="48" alt="Иконка Твиттера">
+              <img src="img/svg-sedona/twitter.svg" width="17" height="17" alt="Иконка Твиттера">
             </a>
           </li>
           <li>
             <a class="social-button" href="#">
               <span class="visually-hidden">Фейсбук</span>
-              <img src="img/svg-sedona/fb-icon.svg" width="46" height="48" alt="Иконка Фейсбука">
+              <img src="img/svg-sedona/fb-icon.svg" width="12" height="20" alt="Иконка Фейсбука">
             </a>
           </li>
           <li>
             <a class="social-button" href="#">
               <span class="visually-hidden">Ютуб</span>
-              <img src="img/svg-sedona/youtube.svg" width="46" height="48" alt="Иконка Ютуба">
+              <img src="img/svg-sedona/youtube.svg" width="20" height="16" alt="Иконка Ютуба">
             </a>
           </li>
         </ul>
